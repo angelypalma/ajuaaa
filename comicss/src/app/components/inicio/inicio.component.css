@@ -511,3 +511,13 @@ body {
     font-size: 32px;
   }
 }
+
+
+.producto-card {
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.producto-card:hover {
+  transform: translateY(-5px);
+}

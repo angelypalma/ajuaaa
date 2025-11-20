@@ -26,7 +26,6 @@
   
   <div class="hero-content">
     <div class="wonder-woman">
-      <img src="assets/wonder-woman.png" alt="Wonder Woman">
     </div>
     
     <div class="speech-bubble">
@@ -44,7 +43,7 @@
   
   <div class="productos-slider-container">
     <div class="productos-slider">
-      <div class="producto-card" *ngFor="let producto of productos">
+      <div class="producto-card" *ngFor="let producto of productos" (click)="verProducto(producto.id)">
         <div class="producto-image">
           <img [src]="producto.imagen" [alt]="producto.titulo">
         </div>
@@ -52,14 +51,12 @@
         <p>{{ producto.descripcion }}</p>
         <div class="producto-footer">
           <span class="precio">$ {{ producto.precio }}</span>
-          <button class="btn-agregar">Agregar</button>
+          <button class="btn-agregar">Ver producto</button>
         </div>
       </div>
     </div>
   </div>
 </section>
-
-
 
 <!-- SECCIÓN 4: COMICS MÁS VENDIDOS (FONDO ROJO) - DESLIZABLE -->
 <section class="vendidos-section">
@@ -67,7 +64,7 @@
   
   <div class="vendidos-slider-container">
     <div class="vendidos-slider">
-      <div class="producto-card" *ngFor="let comic of comicsVendidos">
+      <div class="producto-card" *ngFor="let comic of comicsVendidos" (click)="verComic(comic.id)">
         <div class="producto-image">
           <img [src]="comic.imagen" [alt]="comic.titulo">
         </div>
@@ -75,7 +72,7 @@
         <p>{{ comic.descripcion }}</p>
         <div class="producto-footer">
           <span class="precio">$ {{ comic.precio }}</span>
-          <button class="btn-agregar">Agregar</button>
+          <button class="btn-agregar">Ver producto</button>
         </div>
       </div>
     </div>
