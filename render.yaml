@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: ajuaaa
+    env: static
+    buildCommand: cd comicss && npm install && npm run build
+    staticPublishPath: comicss/dist/comicss
+    routes:
+      - type: rewrite
+        source: /*
+        destination: /index.html
