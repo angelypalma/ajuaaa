@@ -2,7 +2,7 @@ services:
   - type: web
     name: ajuaaa
     env: static
-    buildCommand: cd comicss && npm install && npm run build
+    buildCommand: cd comicss && npm ci && npm run build -- --base-href=/
     staticPublishPath: comicss/dist/comicss
     routes:
       - type: rewrite
